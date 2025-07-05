@@ -1,0 +1,16 @@
+.ProseMirror {
+  outline: none;
+  min-height: 150px;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 8px;
+}
+
+button {
+  margin-right: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  cursor: pointer;
+}

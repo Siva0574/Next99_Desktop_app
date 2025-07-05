@@ -1,69 +1,77 @@
-# React + TypeScript + Vite
+# Next99 Desktop App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully functional cross-platform desktop application built with **Electron**, **React**, and **TypeScript**, implementing a **Canvas + Widget system**.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Electron** - Cross-platform desktop framework
+- **React** - Frontend UI components
+- **TypeScript** - Static typing
+- **Vite** - Lightning-fast development server and bundler
+- **@hello-pangea/dnd** - Drag-and-drop support
+- **uuid** - Unique IDs for widgets
+- **react-quill** - Rich text editor
+- **CSS (Optional)** custom CSS
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📁 src/
+│  ├── components/
+│  │   ├── canvas/
+│  │   │   ├── CanvasApp.tsx
+│  │   │   ├── CanvasList.tsx
+│  │   │   ├── CanvasToolbar.tsx
+│  │   │   └── CanvasArea.tsx
+│  │   ├── widgets/
+│  │   │   ├── TextWidget.tsx
+│  │   │   ├── ImageWidget.tsx
+│  │   │   └── TableWidget.tsx
+│  │   └── common/
+│  │       └── PromptModal.tsx
+│  ├── types/index.ts
+│  └── App.tsx
+📁 electron/
+│  ├── main.cjs
+│  └── preload.ts
+📄 index.html
+📄 package.json
+📄 vite.config.ts
+📄 tsconfig.json
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1. Clone the Repo
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+git clone https://github.com/Siva0574/Next99_Desktop_app.git
+cd next99-desktop-app
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Install All Dependencies
+
+# Electron for building desktop apps
+npm install electron
+
+# React library for building UI
+npm install react react-dom
+
+# UUID for generating unique IDs for widgets
+npm install uuid
+
+# Rich text editor used in TextWidget
+npm install react-quill
+
+# Drag-and-drop support for widgets
+npm install @hello-pangea/dnd
+
+# TypeScript support for static typing
+npm install -D typescript
+
+# Vite is used as the fast frontend bundler/dev server
+npm install -D vite
+
+# Run multiple commands in parallel (like Vite + Electron)
+npm install -D concurrently
+
+Thank you for this opportunity.
+I'm truly grateful for the chance to demonstrate my skills through this take-home test. It’s been a valuable experience, and I’m excited about the possibility of contributing to the Next99 team.
